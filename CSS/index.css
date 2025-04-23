@@ -8,6 +8,11 @@
     --darkGrey-color: #777;
 }
 
+@font-face {
+    font-family: Fishing_font;
+    src: url("font/Beach.otf") format("truetype");
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -16,7 +21,7 @@
 
 html,
 body {
-    font-family: 'Poppins';
+    font-family: 'Fishing_font', sans-serif;
 }
 
 header {
@@ -40,7 +45,6 @@ header {
     position: absolute;
     top: 0;
     left: 25%;
-    background: rgba(0,0,0,0.3);
     width: 1px;
     height: 100vh;
 }
@@ -49,7 +53,6 @@ header {
     position: absolute;
     top: 0;
     left: 50%;
-    background: rgba(0,0,0,0.3);
     width: 1px;
     height: 100vh;
 }
@@ -58,7 +61,6 @@ header {
     position: absolute;
     top: 0;
     left: 75%;
-    background: rgba(0,0,0,0.3);
     width: 1px;
     height: 100vh;
 }
@@ -78,8 +80,9 @@ header {
     display: flex;
 }
 
-nav .logo {
+nav .logo p i{
     width: 40%;
+    font-family: 'Fishing_font', sans-serif;
 }
 
 nav .menu {
@@ -118,7 +121,7 @@ ul li {
 }
 
 .logo p {
-    font-family: 'Monument';
+    font-family: 'Fishing_font', sans-serif;
     font-size: 24px;
     color: #222;
     font-weight: lighter;
