@@ -1,0 +1,125 @@
+    *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+    @media(max-width: 880px) {
+    *{
+        transition: all 0.7s ease;
+    }
+    .navbar{
+        backdrop-filter: none;
+    }
+    .navbar-Container .navbar-menu{
+     flex-direction: column;
+     align-items: flex-start;    
+     gap: 1.7rem !important;
+     position: absolute;
+     height: 100vh;
+     width: 250px;
+     top: 0;
+     right:0;
+     padding:5rem 1.5rem;
+     box-shadow: 0 10px 10px rgba(0,0,0,0.5);
+     backdrop-filter: blur(77%);
+     color: black;
+     font-size: larger;
+    }
+    .navbar-toggle{
+        display: block;
+        z-index: 999;
+    }
+    .navbar-button{
+        margin-top: 20px;
+        background-color: #107c6e;
+        align-items: end;
+        justify-content: end;
+    }
+}
+    body{
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    background: #a6e6ff;
+    background: linear-gradient(178deg, rgba(166, 230, 255, 0.83) 0%, rgba(69, 120, 196, 1) 59%, rgba(0, 0, 0, 1) 100%);
+}
+    .navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    box-shadow: blur(10px); 
+    backdrop-filter: blur(10px);
+    z-index: 999;
+    background-color: #6d6d6b;
+}
+    .navbar-Container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 0, 2rem;
+    max-width: 1600px;
+}
+    .navbar-logo{
+    margin-left: 2rem;  
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 600;
+    text-decoration: none;
+    cursor:crosshair;
+}
+    .navbar-Container .navbar-menu{
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    list-style: none;
+    margin-right: 2rem;
+}
+    .navbar-Container .navbar-menu li a{
+    text-decoration: none;
+    color: #1a1818;
+    font-size: 1.3rem;
+    font-weight: 500;
+    padding: 3px 20px;
+    border-radius: 2px solid transparent;
+    transition: all 0.7s ease;
+    white-space: nowrap;
+}
+    .navbar-Container .navbar-menu li a:hover{
+    background: #4fdfcb;
+    color: #333;
+    border: 2px solid #107c6e;
+}
+    .navbar-toggle{
+    display: none;
+    background:transparent;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+    .bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    background: #070707;
+    transition: all 0.3s ease;
+}
+    .navbar-button{
+    border: none;
+    padding: 10px 20px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #107c6e;
+    border-radius: 93% 7% 95% 5% / 7% 89% 11% 93% ;
+    
+
+}
+    .navbar-button:hover{
+    background: #4fdfcb;
+    color: #333;
+    border: solid #107c6e;
+}
