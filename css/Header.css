@@ -7,10 +7,21 @@
   box-sizing: border-box;
 }
 nav {
-    position: sticky;
-  background: #0082e649;
-  height: 80px;
+  position: sticky;
+  top: 0; /* Ensures the header sticks to the top */
+  background: linear-gradient(90deg, rgba(111, 106, 204, 1) 0%, rgba(9, 119, 121, 1) 39%, rgba(0, 212, 255, 1) 100%);
+  height: auto; /* Adjusts height to fit content */
   width: 100%;
+  z-index: 1000; /* Ensures it stays above other elements */
+  padding: 0 20px; /* Optional: Add padding for better spacing */
+}
+nav.transparent {
+  background: none; /* Removes the background color */
+  transition: 0.3s ease; /* Smooth transition */
+}
+nav.hidden {
+  transform: translateY(-100%); /* Moves the nav out of view */
+  transition: transform 0.3s ease; /* Smooth transition */
 }
 label.logo {
   color: white;
@@ -28,14 +39,56 @@ nav ul li {
   line-height: 80px;
   margin: 0 5px;
 }
-button{
-    background: #6ef5f5;
+  .button-71 a{
+    text-decoration: none;
     color: white;
-    font-size: 17px;
-    padding: 7px 13px;
-    border-radius: 3px;
-    text-transform: uppercase;
-}
+  }
+  .button-71 {
+    background-color: #0078d0;
+    border: 0;
+    border-radius: 26px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 600;
+    outline: 0;
+    padding: 16px 21px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    transition: all .3s;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+  }
+  
+  .button-71:before {
+    background-color: initial;
+    background-image: linear-gradient(#fff 0, rgba(255, 255, 255, 0) 100%);
+    border-radius: 90px;
+    content: "";
+    height: 25%;
+    left: 2%;
+    opacity: .5;
+    position: absolute;
+    top: 0;
+    transition: all .3s;
+    width: 92%;
+  }
+  
+  .button-71 a:hover {
+    background: none;
+    color: #fff;
+    box-shadow: rgba(255, 255, 255, .2) 0 10px 25px inset, rgba(0, 0, 0, .1) 0 3px 5px, rgba(0, 0, 0, .1) 0 10px 13px;
+    transform: scale(2);
+  }
+  
+  @media (min-width: 768px) {
+    .button-71 {
+      padding: 16px 48px;
+    }
+  }
 nav ul li a {
   color: white;
   font-size: 17px;
@@ -43,7 +96,6 @@ nav ul li a {
   border-radius: 3px;
   text-transform: uppercase;
 }
-a.active,
 a:hover {
   background: #1b9bff;
   transition: .5s;

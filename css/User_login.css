@@ -1,0 +1,260 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Prevent scrolling and white space */
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+  padding: 0 10px;
+  position: relative; /* Ensure proper positioning for pseudo-elements */
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url("Images/Water.png"), #000;
+  background-position: center;
+  background-size: cover;
+}
+
+body::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1; /* Ensure bubbles are behind the form */
+  overflow: hidden;
+}
+
+/* Bubble styles */
+.bubble {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  animation: float 10s infinite ease-in-out;
+  z-index: 0; /* Ensure bubbles are behind the form */
+}
+
+/* Different sizes and positions for bubbles */
+.bubble:nth-child(1) {
+  width: 30px;
+  height: 30px;
+  left: 10%;
+  animation-duration: 12s;
+  animation-delay: 0s;
+}
+
+.bubble:nth-child(2) {
+  width: 50px;
+  height: 50px;
+  left: 25%;
+  animation-duration: 15s;
+  animation-delay: 2s;
+}
+
+.bubble:nth-child(3) {
+  width: 40px;
+  height: 40px;
+  left: 40%;
+  animation-duration: 10s;
+  animation-delay: 4s;
+}
+
+.bubble:nth-child(4) {
+  width: 60px;
+  height: 60px;
+  left: 55%;
+  animation-duration: 18s;
+  animation-delay: 6s;
+}
+
+.bubble:nth-child(5) {
+  width: 20px;
+  height: 20px;
+  left: 70%;
+  animation-duration: 8s;
+  animation-delay: 8s;
+}
+
+.bubble:nth-child(6) {
+  width: 45px;
+  height: 45px;
+  left: 85%;
+  animation-duration: 14s;
+  animation-delay: 10s;
+}
+
+/* Additional bubble styles */
+.bubble:nth-child(7) {
+  width: 25px;
+  height: 25px;
+  left: 15%;
+  animation-duration: 11s;
+  animation-delay: 1s;
+}
+
+.bubble:nth-child(8) {
+  width: 35px;
+  height: 35px;
+  left: 30%;
+  animation-duration: 13s;
+  animation-delay: 3s;
+}
+
+.bubble:nth-child(9) {
+  width: 45px;
+  height: 45px;
+  left: 50%;
+  animation-duration: 16s;
+  animation-delay: 5s;
+}
+
+.bubble:nth-child(10) {
+  width: 55px;
+  height: 55px;
+  left: 65%;
+  animation-duration: 19s;
+  animation-delay: 7s;
+}
+
+.bubble:nth-child(11) {
+  width: 20px;
+  height: 20px;
+  left: 80%;
+  animation-duration: 9s;
+  animation-delay: 9s;
+}
+
+.bubble:nth-child(12) {
+  width: 50px;
+  height: 50px;
+  left: 90%;
+  animation-duration: 14s;
+  animation-delay: 11s;
+}
+
+/* Bubble animation */
+@keyframes float {
+  0% {
+    transform: translateY(100vh) scale(1);
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(-10vh) scale(1.2);
+    opacity: 0;
+  }
+}
+.wrapper {
+  width: 400px;
+  border-radius: 8px;
+  padding: 30px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+form {
+  display: flex;
+  flex-direction: column;
+}
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #fff;
+}
+.input-field {
+  position: relative;
+  border-bottom: 2px solid #ccc;
+  margin: 15px 0;
+}
+.input-field label {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  color: #fff;
+  font-size: 16px;
+  pointer-events: none;
+  transition: 0.15s ease;
+}
+.input-field input {
+  width: 100%;
+  height: 40px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  color: #fff;
+}
+.input-field input:focus~label,
+.input-field input:valid~label {
+  font-size: 0.8rem;
+  top: 10px;
+  transform: translateY(-120%);
+}
+.forget {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 25px 0 35px 0;
+  color: #fff;
+}
+#remember {
+  accent-color: #fff;
+}
+.forget label {
+  display: flex;
+  align-items: center;
+}
+.forget label p {
+  margin-left: 8px;
+}
+.wrapper a {
+  color: #efefef;
+  text-decoration: none;
+}
+.wrapper a:hover {
+  text-decoration: underline;
+}
+button {
+  background: #fff;
+  color: #000;
+  font-weight: 600;
+  border: none;
+  padding: 12px 20px;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: 16px;
+  border: 2px solid transparent;
+  transition: 0.3s ease;
+}
+button:hover {
+  color: #fff;
+  border-color: #fff;
+  background: rgba(255, 255, 255, 0.15);
+}
+.register {
+  text-align: center;
+  margin-top: 30px;
+  color: #fff;
+}

@@ -1,0 +1,48 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Register</title>
+  <link rel="stylesheet" href="css/User_login.css">
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js"></script>
+  <!-- Link to external JavaScript -->
+  <script src="js/register.js" defer></script>
+</head>
+<body>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="bubble"></div>
+  <div class="wrapper">
+    <form id="registerForm">
+      <h2>Register</h2>
+      <div class="input-field">
+        <input type="text" id="fullName" required>
+        <label>Enter your full name</label>
+      </div>
+      <div class="input-field">
+        <input type="email" id="email" required>
+        <label>Enter your email</label>
+      </div>
+      <div class="input-field">
+        <input type="password" id="password" required>
+        <label>Create a password</label>
+      </div>
+      <div class="input-field">
+        <input type="password" id="confirmPassword" required>
+        <label>Confirm your password</label>
+      </div>
+      <button type="submit">Register</button>
+      <div class="login">
+        <p style="color: white;">Already have an account? <a href="User_Login.html">Login</a></p>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
