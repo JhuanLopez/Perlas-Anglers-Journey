@@ -258,3 +258,27 @@ button:hover {
   margin-top: 30px;
   color: #fff;
 }
+
+.return-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #3f61f7; /* Green background */
+  color: white;
+  text-decoration: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: background 0.3s ease;
+}
+
+.return-button i {
+  font-size: 16px;
+}
+
+.return-button:hover {
+  background: #37faea; /* Darker green on hover */
+}

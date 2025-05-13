@@ -328,10 +328,11 @@ body {
   }
 }
 .container1 {
-  margin: 100px 50px;
-  width: 350px; /* Adjusted width */
-  height: 500px; /* Adjusted height */
+  width: 250px; /* Adjusted width for all containers */
+  height: 400px; /* Adjusted height for all containers */
   perspective: 800px;
+  flex-shrink: 0; /* Prevent containers from shrinking */
+  margin: 20px; /* Consistent margin for all containers */
 }
 
 .container1:hover > .card1 {
@@ -357,12 +358,12 @@ body {
 }
 
 .front1{
-  background-image: url(templates/Lo.jpg);
+  background-image: url(Images/devsicons/lopez.png);
   background-repeat: no-repeat;
-  background-size: contain    ;
+  background-size: cover   ;
 }
 .back1 {
-  background-image: url(Images/devs/JPRL.jpg);
+  background-color: cyan;
   background-repeat: no-repeat;
   background-size: cover    ;
   transform: rotateY(180deg);
@@ -413,7 +414,7 @@ body {
         margin-left: 20px;
     }
       .back {
-        background-image: url(templates/dev1.jpg);
+        background-color: cyan;
         background-repeat: no-repeat;
         background-size: contain    ;
         transform: rotateY(180deg);
@@ -441,6 +442,7 @@ body {
   height: 400px; /* Adjusted height for all containers */
   perspective: 800px;
   flex-shrink: 0; /* Prevent containers from shrinking */
+  margin: 20px; /* Consistent margin for all containers */
 }
 
 .container1:hover > .card1 {
@@ -467,13 +469,13 @@ body {
 }
 
 .front1 {
-  background-image: url(templates/Lo.jpg);
+  background-image: url(Images/devsicons/lopez.png);
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
 }
 
 .back1 {
-  background-image: url(Images/devs/JPRL.jpg);
+  background-color: cyan;
   background-repeat: no-repeat;
   background-size: cover;
   transform: rotateY(180deg);
@@ -835,4 +837,244 @@ body {
   .back1 {
     gap: 2rem; /* Further reduce gap between elements inside the back of the card */
   }
+}
+
+/* Scrolling gallery styles */
+.scrolling-gallery {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden;
+}
+
+.gallery-container {
+  display: flex;
+  width: 400%; /* Adjust based on the number of items */
+  height: 100%;
+  scroll-snap-type: x mandatory; /* Enable snap scrolling */
+  overflow-x: scroll;
+  scroll-behavior: smooth;
+}
+
+.gallery-item {
+  flex: 0 0 100%; /* Each item takes up 100% of the viewport width */
+  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scroll-snap-align: start; /* Snap to the start of each item */
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.gallery-text {
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1.2rem;
+}
+
+/* Styles for container2 */
+.container2 {
+  width: 250px; /* Adjusted width for all containers */
+  height: 400px; /* Adjusted height for all containers */
+  perspective: 800px;
+  flex-shrink: 0; /* Prevent containers from shrinking */
+}
+
+.container2:hover > .card2 {
+  cursor: pointer;
+  transform: rotateY(180deg) scale(1.1); /* Slightly smaller scale on hover */
+}
+
+.card2 {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  transition: transform 1500ms;
+  transform-style: preserve-3d;
+}
+
+.front2,
+.back2 {
+  height: 100%;
+  width: 100%;
+  border-radius: 2rem;
+  box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.front2 {
+  background-image: url(Images/devsicons/Garlet.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.back2 {
+  background-color: cyan;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+
+/* Styles for container3 */
+.container3 {
+  width: 250px; /* Adjusted width for all containers */
+  height: 400px; /* Adjusted height for all containers */
+  perspective: 800px;
+  flex-shrink: 0; /* Prevent containers from shrinking */
+}
+
+.container3:hover > .card3 {
+  cursor: pointer;
+  transform: rotateY(180deg) scale(1.1); /* Slightly smaller scale on hover */
+}
+
+.card3 {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  transition: transform 1500ms;
+  transform-style: preserve-3d;
+}
+
+.front3,
+.back3 {
+  height: 100%;
+  width: 100%;
+  border-radius: 2rem;
+  box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.front3 {
+  background-image: url(Images/devsicons/Camacho.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.back3 {
+  background-color: cyan;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+
+/* Styles for container4 */
+.container4 {
+  width: 250px; /* Adjusted width for all containers */
+  height: 400px; /* Adjusted height for all containers */
+  perspective: 800px;
+  flex-shrink: 0; /* Prevent containers from shrinking */
+}
+
+.container4:hover > .card4 {
+  cursor: pointer;
+  transform: rotateY(180deg) scale(1.1); /* Slightly smaller scale on hover */
+}
+
+.card4 {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  transition: transform 1500ms;
+  transform-style: preserve-3d;
+}
+
+.front4,
+.back4 {
+  height: 100%;
+  width: 100%;
+  border-radius: 2rem;
+  box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.front4 {
+  background-image: url(Images/devsicons/shimada.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.back4 {
+  background-color: cyan;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+
+/* Styles for container5 */
+.container5 {
+  width: 250px; /* Adjusted width for all containers */
+  height: 400px; /* Adjusted height for all containers */
+  perspective: 800px;
+  flex-shrink: 0; /* Prevent containers from shrinking */
+}
+
+.container5:hover > .card5 {
+  cursor: pointer;
+  transform: rotateY(180deg) scale(1.1); /* Slightly smaller scale on hover */
+}
+
+.card5 {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  transition: transform 1500ms;
+  transform-style: preserve-3d;
+}
+
+.front5,
+.back5 {
+  height: 100%;
+  width: 100%;
+  border-radius: 2rem;
+  box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.front5 {
+  background-image: url(Images/devsicons/Sarmiento.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.back5 {
+  background-color: cyan;
+  background-repeat: no-repeat;
+  background-size: cover;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
 }
