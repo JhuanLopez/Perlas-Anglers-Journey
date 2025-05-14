@@ -6,7 +6,7 @@ const accountsTable = document.getElementById("accountsTable");
 // Fetch all registered emails from Firebase
 async function fetchEmails() {
   try {
-    const usersRef = ref(database, "users");
+    const usersRef = ref(database, "users"); // Reference to the "users" node in Firebase
     const snapshot = await get(usersRef);
 
     if (snapshot.exists()) {
@@ -17,7 +17,7 @@ async function fetchEmails() {
 
         // Add Email
         const emailCell = document.createElement("td");
-        emailCell.textContent = user.email;
+        emailCell.textContent = user.email || "No email found"; // Fallback if email is missing
         row.appendChild(emailCell);
 
         // Append the row to the table
