@@ -45,10 +45,10 @@ if (registerForm) {
       });
 
       alert("Registration successful!");
-      window.location.href = "User_Login.html";
-    } catch (error) {
+      window.location.href = "index.html";
+    } catch (error) {;
+      alert("Error during registration: Email is already in use.");
       console.error(error);
-      alert("Error during registration: " + error.message);
     }
   });
 }
@@ -70,7 +70,7 @@ if (loginForm) {
       window.location.href = "index.html"; // Redirect to user account page
     } catch (error) {
       console.error(error);
-      alert("Error during login: " + error.message);
+      alert("something went wrong, please try again.");
     }
   });
 }

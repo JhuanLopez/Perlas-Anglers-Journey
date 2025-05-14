@@ -4,9 +4,49 @@ body {
     padding: 0;
     background-image: url(Images/Water.png);
     background-size: cover;
+    background-position: center;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white; /* Set font color to white */
+    font-family: Arial, sans-serif;
 }
 
+/* Center the content */
+.container {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.2); /* Light white transparent background */
+    border: 2px solid rgba(255, 255, 255, 0.5); /* Light white border */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 800px;
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th, table td {
+    border: 1px solid rgba(255, 255, 255, 0.5); /* Light white border */
+    padding: 10px;
+    text-align: center;
+    color: white; /* Set font color to white */
+    background: rgba(255, 255, 255, 0.1); /* Light white transparent background */
+}
+
+table th {
+    font-weight: bold;
+    background: rgba(255, 255, 255, 0.3); /* Slightly darker background for headers */
+}
+
+/* Bubble animation */
 .bubbles {
     position: absolute;
     top: 0;
