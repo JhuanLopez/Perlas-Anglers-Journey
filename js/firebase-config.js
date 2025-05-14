@@ -1,15 +1,14 @@
 // Import Firebase SDKs
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js";
-import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-database.js";
+import { getAuth } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js";
+import { getDatabase } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-database.js";
 
-// Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyAA25xHdOKXO3Xejj23-JjfGnTDd1gZPZM",
   authDomain: "perlas-database.firebaseapp.com",
   databaseURL: "https://perlas-database-default-rtdb.asia-southeast1.firebasedatabase.app",
   projectId: "perlas-database",
-  storageBucket: "perlas-database.perlasstorage.app",
+  storageBucket: "perlas-database.firebasestorage.app",
   messagingSenderId: "623014500525",
   appId: "1:623014500525:web:48b3fbb3759dd3c4b90e24",
   measurementId: "G-KFK18WZW79"
@@ -17,8 +16,8 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
-const database = getDatabase(app);
+export const auth = getAuth(app);
+export const database = getDatabase(app);
 
 // Handle Registration
 const registerForm = document.getElementById("registerForm");
