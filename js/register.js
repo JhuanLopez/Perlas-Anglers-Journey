@@ -26,24 +26,17 @@ document.getElementById("registerForm").addEventListener("submit", async (e) => 
     const userCredential = await createUserWithEmailAndPassword(auth, email, password);
     const user = userCredential.user;
 
-    // Determine role based on email
-    const role = email.endsWith(".admin") ? "admin" : "user";
-
     // Save user data to the database
     await set(ref(database, `users/${user.uid}`), {
       fullName,
       email,
-      role,
+      role: "user", // Default role is "user"
     });
 
-    alert("Registration successful!");
+    alert("Registration successful! Redirecting to login page...");
 
-    // Redirect based on role
-    if (role === "admin") {
-      window.location.href = "Admin.html";
-    } else {
-      window.location.href = "User_Login.html";
-    }
+    // Redirect to login page
+    window.location.href = "User_Login.html";
   } catch (error) {
     console.error(error);
     alert("Error during registration: " + error.message);
