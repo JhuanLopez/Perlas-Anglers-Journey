@@ -5,20 +5,20 @@ import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/9.22.2
 
 // Firebase configuration
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_AUTH_DOMAIN",
-  databaseURL: "YOUR_DATABASE_URL",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_STORAGE_BUCKET",
-  messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-  appId: "YOUR_APP_ID",
-  measurementId: "YOUR_MEASUREMENT_ID"
+  apiKey: "AIzaSyAA25xHdOKXO3Xejj23-JjfGnTDd1gZPZM",
+  authDomain: "perlas-database.firebaseapp.com",
+  databaseURL: "https://perlas-database-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "perlas-database",
+  storageBucket: "perlas-database.firebasestorage.app",
+  messagingSenderId: "623014500525",
+  appId: "1:623014500525:web:48b3fbb3759dd3c4b90e24",
+  measurementId: "G-KFK18WZW79"
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-export const database = getDatabase(app);
 const auth = getAuth(app);
+const database = getDatabase(app);
 
 // Handle Registration
 const registerForm = document.getElementById("registerForm");

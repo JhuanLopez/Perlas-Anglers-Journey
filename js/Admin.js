@@ -36,17 +36,5 @@ async function fetchEmails() {
   }
 }
 
-// Mock data for testing
-const mockData = {
-  "users": {
-    "uid1": {
-      "email": "user1@example.com"
-    },
-    "uid2": {
-      "email": "user2@example.com"
-    }
-  }
-};
-
 // Call the function to fetch emails
 fetchEmails();
