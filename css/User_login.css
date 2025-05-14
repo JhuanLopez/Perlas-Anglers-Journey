@@ -170,8 +170,8 @@ body::after {
   padding: 30px;
   text-align: center;
   border: 1px solid rgba(255, 255, 255, 0.5);
-  /* backdrop-filter: blur(8px); */
-  /* -webkit-backdrop-filter: blur(8px); */
+  backdrop-filter: blur(8px); 
+   -webkit-backdrop-filter: blur(8px); 
 }
 form {
   display: flex;
