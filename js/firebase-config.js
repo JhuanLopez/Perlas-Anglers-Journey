@@ -39,16 +39,17 @@ if (registerForm) {
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
       const user = userCredential.user;
 
-      // Save user data to the database during registration
+      // Save user data to the database
       await set(ref(database, `users/${user.uid}`), {
-        email: email // Store the email in the database
+        email,
+        role: "user" // Default role
       });
 
       alert("Registration successful!");
-      window.location.href = "index.html";
-    } catch (error) {;
-      alert("Error during registration: Email is already in use.");
+      window.location.href = "User_Login.html";
+    } catch (error) {
       console.error(error);
+      alert("Error during registration: " + error.message);
     }
   });
 }
@@ -67,10 +68,10 @@ if (loginForm) {
       const user = userCredential.user;
 
       alert("Login successful!");
-      window.location.href = "index.html"; // Redirect to user account page
+      window.location.href = "User_Account.html"; // Redirect to user account page
     } catch (error) {
       console.error(error);
-      alert("something went wrong, please try again.");
+      alert("Error during login: " + error.message);
     }
   });
 }
