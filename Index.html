@@ -2,69 +2,18 @@
 <html lang="en" dir="ltr">
 <head>
   <meta charset="utf-8">
-  <title>Perlas: Anglers Journey</title>
+  <title>Perlas</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/Header.css">
   <link rel="stylesheet" href="css/Landing.css">
   <link rel="stylesheet" href="css/icons/all.min.css">
   <link rel="stylesheet" href="css/icons/fontawesome.min.css">
+  <script src="js/animation.js"></script>
+  <script src="js/scrollingGallery.js"></script>
+  <script src="js/scrollAnimation.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-  <script src="js/animation.js" defer></script>
-  <script src="js/scrollingGallery.js" defer></script>
-  <script src="js/scrollAnimation.js" defer></script>
-  <style>
-    /* Hide the checkbox */
-    #check {
-      display: none;
-    }
-
-    /* Style the hamburger menu button */
-    .checkbtn {
-      font-size: 30px;
-      color: white;
-      cursor: pointer;
-      display: none; /* Hidden by default */
-    }
-
-    /* Show the hamburger menu button on smaller screens */
-    @media (max-width: 768px) {
-      .checkbtn {
-        display: block;
-      }
-
-      nav ul {
-        position: fixed;
-        top: 0;
-        left: -100%; /* Hide the menu off-screen */
-        width: 100%;
-        height: 100vh;
-        background: #333;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        transition: all 0.5s;
-      }
-
-      /* Show the menu when the checkbox is checked */
-      #check:checked ~ ul {
-        left: 0; /* Slide the menu into view */
-      }
-
-      nav ul li {
-        margin: 20px 0;
-      }
-
-      nav ul li a {
-        color: white;
-        font-size: 20px;
-        text-decoration: none;
-      }
-    }
-  </style>
 </head>
 <body>
-  <!-- Navigation Bar -->
   <nav>
     <input type="checkbox" id="check">
     <label for="check" class="checkbtn">
@@ -73,44 +22,72 @@
     <label class="logo">Perlas: Anglers Journey</label>
     <ul>
       <li><a class="active" href="#">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#maps">Maps</a></li>
+      <li><a href="">About</a></li>
+      <li><a href="">Maps</a></li>
       <li><a href="#meet-devs">Devs</a></li>
-      <li><button class="button-71" role="button"><a href="User_Login.html">Download</a></button></li>
+      <script src="js/scrollAnimation.js"></script>
+      <button class="button-71" role="button"><a href="User_Login.html">Download</a></button>
+      
     </ul>
   </nav>
-
-  <!-- Hero Section -->
+  <section class="Image_Viewer1">
+    <!-- Bubbles -->
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+  </section>
   <section class="hero-section">
     <div class="hero">
       <div class="hero-content">
-        <h2>Perlas: Anglers Journey</h2>
+        <h2>Perlas Anglers Journey</h2>
         <p>
-          Perlas is a 3D fishing game showcasing the beauty and art of fishing in the Philippines.
-          Catch cultivated fish, explore the beauty of the ocean, and enjoy the chill vibes of the sea.
+          Perlas is a 3D fishing Game showcasing the beauty and art of fishing here in the Philippines,
+          where you can catch cultivated fish and explore the beauty of the ocean and enjoy the
+          chill vibes of the sea.
         </p>
       </div>
-      <div class="img">
-        <img src="css/Images/tempboat.png" alt="Hero Image" />
+      <div class="buttons">
       </div>
     </div>
+    <div class="img">
+      <img src="css/Images/tempboat.png" alt="hero image" />
+    </div>
   </section>
-
-  <!-- Bubbles Section -->
-  <section class="Image_Viewer1">
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-    <div class="bubble"></div>
-  </section>
-
-  <!-- Meet the Developers Section -->
+  <!-- <section class="scrolling-gallery">
+    <div class="gallery-container">
+      <div class="gallery-item">
+        <img src="css/Images/image1.jpg" alt="Image 1">
+        <div class="gallery-text">
+          <p>Explore the beauty of the ocean.</p>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <img src="css/Images/image2.jpg" alt="Image 2">
+        <div class="gallery-text">
+          <p>Catch unique and cultivated fish.</p>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <img src="css/Images/image3.jpg" alt="Image 3">
+        <div class="gallery-text">
+          <p>Experience the serenity of the sea.</p>
+        </div>
+      </div>
+      <div class="gallery-item">
+        <img src="css/Images/image4.jpg" alt="Image 4">
+        <div class="gallery-text">
+          <p>Discover hidden treasures underwater.</p>
+        </div>
+      </div>
+    </div>
+  </section> -->
   <section class="Devs">
     <span id="meet-devs">Meet the Devs</span>
     <div class="container-wrapper">
@@ -156,8 +133,6 @@
       </div>
     </div>
   </section>
-
-  <!-- Footer Section -->
   <footer>
     <div class="footer-container">
       <div class="footer-content">
