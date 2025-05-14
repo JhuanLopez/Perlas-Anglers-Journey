@@ -1,18 +1,13 @@
-import { database } from "./firebase-config.js";
-import { ref, get } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-database.js";
-
 const accountsTable = document.getElementById("accountsTable");
 
-// Fetch all registered emails from Firebase Realtime Database
+// Fetch all registered emails from the server-side API
 async function fetchEmails() {
   try {
-    const usersRef = ref(database, "users");
-    const snapshot = await get(usersRef);
+    const response = await fetch("https://your-server-endpoint.com/list-users"); // Replace with your API endpoint
+    const users = await response.json();
 
-    if (snapshot.exists()) {
-      const users = snapshot.val();
-      for (const userId in users) {
-        const user = users[userId];
+    if (users.length > 0) {
+      users.forEach((user) => {
         const row = document.createElement("tr");
 
         // Add Email
@@ -22,7 +17,7 @@ async function fetchEmails() {
 
         // Append the row to the table
         accountsTable.appendChild(row);
-      }
+      });
     } else {
       const row = document.createElement("tr");
       const noDataCell = document.createElement("td");
