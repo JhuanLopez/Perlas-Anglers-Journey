@@ -4,7 +4,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login</title>
   <link rel="stylesheet" href="css/User_login.css">
-  <script src="js/Admin.js"></script>
+  <!-- Firebase SDKs -->
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-database.js"></script>
+  <!-- Link to external JavaScript -->
+  <script src="js/login.js" defer></script>
 </head>
 <body>
   <a href="Index.html" class="return-button">
@@ -19,15 +24,15 @@
   <div class="bubble"></div>
   <div class="bubble"></div>
   <div class="wrapper">
-    <form action="#">
+    <form id="loginForm">
       <h2>Login</h2>
       <div class="input-field">
-        <input type="text" required>
-        <label>Enter your email</label>
+        <input type="email" id="email" placeholder="Enter your email" required>
+        <label for="email">Email</label>
       </div>
       <div class="input-field">
-        <input type="password" required>
-        <label>Enter your password</label>
+        <input type="password" id="password" placeholder="Enter your password" required>
+        <label for="password">Password</label>
       </div>
       <div class="forget">
         <label for="remember">

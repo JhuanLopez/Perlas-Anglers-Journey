@@ -1,34 +1,22 @@
-import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js";
-import { getDatabase, ref, get } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-database.js";
-
-const auth = getAuth();
-const database = getDatabase();
+import { auth } from "./firebase-config.js";
+import { signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js";
 
 document.getElementById("loginForm").addEventListener("submit", async (e) => {
   e.preventDefault();
 
+  // Get form values
   const email = document.getElementById("email").value;
   const password = document.getElementById("password").value;
 
   try {
+    // Sign in the user
     const userCredential = await signInWithEmailAndPassword(auth, email, password);
     const user = userCredential.user;
 
-    // Fetch user role from the database
-    const userSnapshot = await get(ref(database, `users/${user.uid}`));
-    if (userSnapshot.exists()) {
-      const userData = userSnapshot.val();
-      const role = userData.role;
+    alert("Login successful!");
 
-      // Redirect based on role
-      if (role === "admin") {
-        window.location.href = "Admin.html";
-      } else {
-        window.location.href = "User_Account.html";
-      }
-    } else {
-      alert("User data not found!");
-    }
+    // Redirect to the appropriate page (e.g., dashboard)
+    window.location.href = "User_Account.html";
   } catch (error) {
     console.error(error);
     alert("Error during login: " + error.message);

@@ -1,12 +1,9 @@
 // Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-import app from "./firebase-config.js"; // Import Firebase configuration
-import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js";
-import { getDatabase, ref, set } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-database.js";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
+import { getAuth } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-auth.js";
+import { getDatabase } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-database.js";
 
 // Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "AIzaSyAA25xHdOKXO3Xejj23-JjfGnTDd1gZPZM",
   authDomain: "perlas-database.firebaseapp.com",
@@ -20,11 +17,10 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
 
-// Initialize Firebase Auth and Database
-const auth = getAuth(app);
-const database = getDatabase(app);
+// Export Firebase services
+export const auth = getAuth(app);
+export const database = getDatabase(app);
 
 document.getElementById("registerForm").addEventListener("submit", async (e) => {
   e.preventDefault();
