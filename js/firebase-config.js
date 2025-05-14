@@ -39,10 +39,9 @@ if (registerForm) {
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
       const user = userCredential.user;
 
-      // Save user data to the database
+      // Save user data to the database during registration
       await set(ref(database, `users/${user.uid}`), {
-        email,
-        role: "user" // Default role
+        email: email // Store the email in the database
       });
 
       alert("Registration successful!");
@@ -68,7 +67,7 @@ if (loginForm) {
       const user = userCredential.user;
 
       alert("Login successful!");
-      window.location.href = "User_Account.html"; // Redirect to user account page
+      window.location.href = "index.html"; // Redirect to user account page
     } catch (error) {
       console.error(error);
       alert("Error during login: " + error.message);

@@ -3,10 +3,10 @@ import { ref, get } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-dat
 
 const accountsTable = document.getElementById("accountsTable");
 
-// Fetch all registered emails from Firebase
+// Fetch all registered emails from Firebase Realtime Database
 async function fetchEmails() {
   try {
-    const usersRef = ref(database, "users"); // Reference to the "users" node in Firebase
+    const usersRef = ref(database, "users");
     const snapshot = await get(usersRef);
 
     if (snapshot.exists()) {
