@@ -68,7 +68,7 @@ if (loginForm) {
       const user = userCredential.user;
 
       alert("Login successful!");
-      window.location.href = "User_Account.html"; // Redirect to user account page
+      window.location.href = "index.html"; // Redirect to user account page
     } catch (error) {
       console.error(error);
       alert("Error during login: " + error.message);
